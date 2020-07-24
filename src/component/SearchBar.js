@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 class SearchBar extends React.Component {
   state = { term: "" };
@@ -11,6 +12,7 @@ class SearchBar extends React.Component {
       <div>
         <form onSubmit={this.onsubmitHandler}>
           <input
+            className="text-box"
             value={this.state.term}
             type="text"
             placeholder="enter the city"
