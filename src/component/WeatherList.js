@@ -2,9 +2,12 @@ import React from "react";
 
 const WeatherList = (props) => {
   console.log(props.weather);
+  console.log(props.icon);
   const weatherList = (props) => {
     if (props.weather === undefined) {
-      return <div>Pls enter the city</div>;
+      return <h1 className="error">Please enter the City</h1>;
+    } else if (props.weather === "not found") {
+      return <h1 className="error">Please enter the valid City</h1>;
     } else {
       return (
         <div>
@@ -12,8 +15,8 @@ const WeatherList = (props) => {
             <h1 className="city-name">
               {props.weather.name} ({props.weather.sys.country})
             </h1>
-            <div className="icon">
-              <i className={`wi ${props.icon} display-1 icon`}></i>
+            <div className="weather-icon">
+              <i className={`wi ${props.icon} display-1 icon `}></i>
               <span className="weather-name">
                 {props.weather.weather[0].main}
               </span>

@@ -4,6 +4,8 @@ import "./style.css";
 const SideNav = (props) => {
   if (props.weather === undefined) {
     return <div></div>;
+  } else if (props.weather === "not found") {
+    return <div></div>;
   } else {
     return (
       <div>
