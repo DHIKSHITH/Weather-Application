@@ -13,8 +13,11 @@ class App extends React.Component {
     this.state = {
       term: undefined,
       icon: undefined,
-      date: "",
+      date: undefined,
+      month: undefined,
+      year: undefined,
       class: "side-nav",
+
       // mumbai: undefined,
       // london: undefined,
       // bengaluru: undefined,
@@ -66,21 +69,45 @@ class App extends React.Component {
 
       this.setState({ term: response.data });
       this.get_WeatherIcon(this.weatherIcon, response.data.weather[0].id);
+      let d = new Date(response.data.dt * 1000);
+      const date = d.getDate();
+      var tomonth = d.getMonth() + 1;
+      var year = d.getFullYear();
+      let month;
+      if (tomonth === 1) {
+        month = "Jan";
+      } else if (tomonth === 2) {
+        month = "Feb";
+      } else if (tomonth === 3) {
+        month = "Mar";
+      } else if (tomonth === 4) {
+        month = "Apr";
+      } else if (tomonth === 5) {
+        month = "May";
+      } else if (tomonth === 6) {
+        month = "Jun";
+      } else if (tomonth === 7) {
+        month = "Jul";
+      } else if (tomonth === 8) {
+        month = "Aug";
+      } else if (tomonth === 9) {
+        month = "Sept";
+      } else if (tomonth === 10) {
+        month = "Oct";
+      } else if (tomonth === 11) {
+        month = "Nov";
+      } else if (tomonth === 12) {
+        month = "Dec";
+      } else {
+        month = null;
+      }
+      this.setState({ date });
+      this.setState({ month });
+      this.setState({ year });
     } catch {
       this.setState({ term: "not found" });
     }
     console.log(this.state.term);
-    // let d = new Date(response.data.dt * 1000);
-    // const date = d.getDate();
-    // var tomonth = d.getMonth() + 1;
-    // var toyear = d.getFullYear();
-    // var hr = d.getHours();
-    // var m = "0" + d.getMinutes();
-    // var s = "0" + d.getSeconds();
-    // this.setState({ date });
-    // console.log(
-    //   `${hr}-${m.substr(-2)}-${s.substr(-2)}- ${date} - ${tomonth} - ${toyear}`
-    // );
   };
 
   openSideMenu(e) {
@@ -118,7 +145,12 @@ class App extends React.Component {
             </header>
             <SearchBar onsubmit={this.onSearchText} weather={this.state.term} />
             <WeatherList weather={this.state.term} icon={this.state.icon} />
-            <Footer date={this.state.date} />
+            <Footer
+              date={this.state.date}
+              month={this.state.month}
+              year={this.state.year}
+              weather={this.state.term}
+            />
           </div>
           <div
             className={

@@ -5,7 +5,7 @@ const WeatherList = (props) => {
   console.log(props.icon);
   const weatherList = (props) => {
     if (props.weather === undefined) {
-      return <h1 className="error">Please enter the City</h1>;
+      return <div></div>;
     } else if (props.weather === "not found") {
       return <h1 className="error">Please enter the valid City</h1>;
     } else {

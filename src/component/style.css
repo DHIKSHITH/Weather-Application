@@ -6,7 +6,6 @@ body {
   height: 100vh;
   background-image: url("https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
-
   color: #fff;
 }
 .container {
@@ -26,6 +25,7 @@ body {
   position: relative;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
+  color: #fff;
 }
 .weather {
   display: flex;
@@ -41,11 +41,12 @@ body {
   margin-top: 38%;
   font-size: 8rem;
   margin-left: 5.5rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 .description {
   display: inline-block;
-  margin-left: 2rem;
+  margin-left: 0.3rem;
   font-size: 2rem;
 }
 
@@ -57,8 +58,11 @@ body {
   padding-top: 1rem;
 }
 .footer-text {
-  padding-left: 2.5rem;
+  padding-left: 5rem;
   font-size: 1.2rem;
+  color: #e4e3e3;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
 }
 
 .city-name {
@@ -109,7 +113,7 @@ body {
 }
 
 .text-box::placeholder {
-  color: #fff;
+  color: #838383;
   font-size: 1.3rem;
 }
 .text-box:focus {
@@ -206,6 +210,8 @@ span {
   margin-bottom: 30%;
   font-family: "Roboto", sans-serif;
   margin-left: 1%;
+  color: #f4f6ff;
+  font-weight: 200;
 }
 
 .more-details {
@@ -300,7 +306,8 @@ span {
   margin-left: 39%;
   width: 23%;
   padding: 0.5rem;
-  border: 2px solid #fff;
+  border: none;
+  border-bottom: 2px solid #e4e3e3;
   background: transparent;
   margin-top: 8rem;
   font-family: "Roboto", sans-serif;
@@ -311,12 +318,15 @@ span {
 .text-box-error::placeholder {
   color: #fff;
   font-size: 1.3rem;
+  border: none;
 }
 .text-box-error:focus {
   background: transparent;
+  border: none;
 }
 .text-box-error:active {
   background: transparent;
+  border: none;
 }
 
 .navigation-err {

@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
               className="text-box-error"
               value={this.state.term}
               type="text"
-              placeholder="enter the city"
+              placeholder="Enter the City"
               onChange={(e) => this.setState({ term: e.target.value })}
             />
           </form>
@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
               className="text-box-error"
               value={this.state.term}
               type="text"
-              placeholder="enter the city"
+              placeholder="Enter the City"
               onChange={(e) => this.setState({ term: e.target.value })}
             />
           </form>
@@ -44,7 +44,7 @@ class SearchBar extends React.Component {
             className="text-box"
             value={this.state.term}
             type="text"
-            placeholder="enter the city"
+            placeholder="Enter the City"
             onChange={(e) => this.setState({ term: e.target.value })}
           />
         </form>
