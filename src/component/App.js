@@ -17,11 +17,6 @@ class App extends React.Component {
       month: undefined,
       year: undefined,
       class: "side-nav",
-
-      // mumbai: undefined,
-      // london: undefined,
-      // bengaluru: undefined,
-      // america: undefined,
     };
     this.weatherIcon = {
       Thunderstorm: "wi-thunderstorm",
