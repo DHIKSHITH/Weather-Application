@@ -102,7 +102,6 @@ class App extends React.Component {
     } catch {
       this.setState({ term: "not found" });
     }
-    console.log(this.state.term);
   };
 
   openSideMenu(e) {
@@ -118,8 +117,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
-          <div className="main">
+        <div className='container'>
+          <div className='main'>
             <header
               className={
                 this.state.term === undefined || this.state.term === "not found"
@@ -128,11 +127,11 @@ class App extends React.Component {
               }
             >
               <span>Weather App</span>
-              <div className="more-details">
+              <div className='more-details'>
                 <a
-                  href="/"
+                  href='/'
                   onClick={(e) => this.openSideMenu(e)}
-                  className="more-Detail"
+                  className='more-Detail'
                 >
                   More Details
                 </a>
@@ -154,11 +153,11 @@ class App extends React.Component {
                 : this.state.class
             }
           >
-            <div className="more-details">
+            <div className='more-details'>
               <a
-                href="/"
+                href='/'
                 onClick={(e) => this.closeSideMenu(e)}
-                className="cancel"
+                className='cancel'
               >
                 &times;
               </a>
