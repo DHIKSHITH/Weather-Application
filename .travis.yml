@@ -6,4 +6,4 @@ before_install:
   - docker build -t dhikshith/weather-application -f Dockerfile.dev .
 
 script:
-  - docker run dhikshith/weather-application npm run test -- --coverage
+  - docker run -e CI=true dhikshith/weather-application npm run test -- --coverage
